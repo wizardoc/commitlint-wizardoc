@@ -1,0 +1,27 @@
+{
+  "name": "commitlint-wizardoc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "repository": "https://github.com/wizardoc/commitlint-wizardoc",
+  "author": "youncccat <1306036576@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --rootDir packages"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "jest": "^27.0.1",
+    "jest-config": "^27.0.1",
+    "lerna": "^4.0.0",
+    "ts-jest": "^27.0.0",
+    "typescript": "3.8.3"
+  },
+  "workspaces": [
+    "commitlint-config-wizardoc",
+    "commitlint-plugin-wizardoc-rules",
+    "commitlint-wizardoc-e2e-tests"
+  ],
+  "dependencies": {}
+}

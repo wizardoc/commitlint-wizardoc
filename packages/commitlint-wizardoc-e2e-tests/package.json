@@ -1,0 +1,9 @@
+{
+  "name": "commitlint-wizardoc-e2e-tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "zx": "^1.12.0"
+  }
+}
