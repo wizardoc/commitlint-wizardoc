@@ -5,6 +5,7 @@ import {
 } from "./constants";
 import { UserConfig } from "@commitlint/types";
 import { enumerateValues } from "./utils/enum";
+import { plugins } from "commitlint-plugin-wizardoc-rules";
 
 export const config: UserConfig = {
   parserPreset: {
@@ -13,19 +14,18 @@ export const config: UserConfig = {
     parserOpts: {
       headerPattern: CONVERSION_MATCH_REGEX,
       headerCorrespondence: [
+        LexicalElement.SYMBOL,
         LexicalElement.TYPE,
         LexicalElement.SCOPE,
         LexicalElement.SUBJECT,
       ],
     },
   },
+  ...plugins,
   rules: {
-    // 'subject-exclamation-mark': [2, 'never'],
+    "break-change-prefix": [2, "always"],
     "footer-leading-blank": [1, "always"],
     "header-max-length": [2, "always", 72],
-    // 'scope-case': [2, 'always', 'lower-case'],
-    "subject-case": [2, "never", ["upper-case"] as any],
-    // 'subject-empty': [2, 'never'],
     "subject-full-stop": [2, "never", "."],
     "type-empty": [2, "never"],
     "scope-empty": [1, "never"],

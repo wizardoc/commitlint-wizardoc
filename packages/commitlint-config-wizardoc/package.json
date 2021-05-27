@@ -9,5 +9,7 @@
   "devDependencies": {
     "@commitlint/types": "^12.1.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "commitlint-plugin-wizardoc-rules": "^1.0.0"
+  }
 }

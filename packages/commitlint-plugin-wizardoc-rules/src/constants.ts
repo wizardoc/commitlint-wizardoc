@@ -1,1 +1,1 @@
-export const breakChangeSymbol: string = "!";
+export const BREAK_CHANGE_SYMBOL = "!";
