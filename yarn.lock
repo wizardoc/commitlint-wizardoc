@@ -426,7 +426,7 @@
 
 "@commitlint/types@^12.1.4":
   version "12.1.4"
-  resolved "https://registry.npmjs.org/@commitlint/types/-/types-12.1.4.tgz"
+  resolved "https://registry.npmjs.org/@commitlint/types/-/types-12.1.4.tgz#9618a5dc8991fb58e6de6ed89d7bf712fa74ba7e"
   integrity sha512-KRIjdnWNUx6ywz+SJvjmNCbQKcKP6KArhjZhY2l+CWKxak0d77SOjggkMwFTiSgLODOwmuLTbarR2ZfWPiPMlw==
   dependencies:
     chalk "^4.0.0"
