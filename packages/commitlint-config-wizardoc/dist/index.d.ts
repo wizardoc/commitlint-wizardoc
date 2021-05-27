@@ -1,11 +1,3 @@
-import { LexicalElement } from "./typings";
-declare const config: {
-    parserOpts: {
-        headerPattern: RegExp;
-        headerCorrespondence: LexicalElement[];
-    };
-    rules: {
-        "body-leading-blank": (string | number)[];
-    };
-};
+import { UserConfig } from "@commitlint/types";
+declare const config: UserConfig;
 export = config;

@@ -5,5 +5,11 @@
   "license": "MIT",
   "scripts": {
     "compile": "tsc"
-  }
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^12.1.4",
+    "@commitlint/parse": "^12.1.4",
+    "@commitlint/types": "^12.1.4"
+  },
+  "dependencies": {}
 }
