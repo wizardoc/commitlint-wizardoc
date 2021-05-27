@@ -1,0 +1,9 @@
+{
+  "name": "shared",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/types": "^12.1.4"
+  }
+}
