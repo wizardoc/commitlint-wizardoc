@@ -7,7 +7,8 @@
   "author": "youncccat <1306036576@qq.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest --rootDir packages"
+    "test": "jest --rootDir packages",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
@@ -19,7 +20,8 @@
     "jest-config": "^27.0.1",
     "lerna": "^4.0.0",
     "ts-jest": "^27.0.0",
-    "typescript": "3.8.3"
+    "typescript": "3.8.3",
+    "husky": "^6.0.0"
   },
   "workspaces": [
     "commitlint-config-wizardoc",
