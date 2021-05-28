@@ -23,7 +23,7 @@ export const config: UserConfig = {
   },
   ...plugins,
   rules: {
-    "break-change-prefix": [2, "always"],
+    "break-change-prefix": [2, "always", "#"],
     "footer-leading-blank": [1, "always"],
     "header-max-length": [2, "always", 72],
     "subject-full-stop": [2, "never", "."],

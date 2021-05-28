@@ -1,6 +1,4 @@
-import shell from "shelljs";
+import { exec } from "shelljs";
 
-export const $ = (pieces: TemplateStringsArray, args?: unknown[]) =>
-  shell.exec(
-    pieces.reduce((pre, cur, i) => pre + cur + ((args ?? [])[i] ?? ""), "")
-  );
+export const $ = (pieces: TemplateStringsArray, ...args: unknown[]) =>
+  exec(pieces.reduce((pre, cur, i) => pre + cur + ((args ?? [])[i] ?? ""), ""));
