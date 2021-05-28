@@ -2224,6 +2224,18 @@ combined-stream@^1.0.6, combined-stream@^1.0.8, combined-stream@~1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
+commitlint-config-wizardoc@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/commitlint-config-wizardoc/-/commitlint-config-wizardoc-1.0.0.tgz#d8f4372b75667ee8b553f1b6fa6eed9553e42a93"
+  integrity sha512-ecOER5XBrTZVVIzRyXfGQMoe8C4OQevP4lYFK/HwB5jhFgCAX1TXiASYQLwgq4iU1hQcHMBc2inHVitVqRadHA==
+  dependencies:
+    commitlint-plugin-wizardoc-rules "^1.0.0"
+
+commitlint-plugin-wizardoc-rules@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/commitlint-plugin-wizardoc-rules/-/commitlint-plugin-wizardoc-rules-1.0.0.tgz#3f6e8a42d42b31c7897a91bc224b85132768324b"
+  integrity sha512-V7NT3egc4LXBYeNtKnYYFtCAb8/3vlea9xNlky4r41HUHC9mx5w6mnKe7NQAucllkLGyYDL/FRt51UiyujrYPg==
+
 compare-func@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/compare-func/-/compare-func-2.0.0.tgz"
