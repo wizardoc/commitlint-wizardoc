@@ -5,3 +5,6 @@ packages/**/node_modules
 # dist
 dist
 packages/**/dist
+
+# NPM
+package-lock.json
