@@ -1,5 +1,5 @@
 import { BREAK_CHANGE_SYMBOL } from "./constants";
-import { Commit, Rule, RuleOutcome } from "@commitlint/types";
+import { Commit, RuleOutcome, RuleConfigCondition } from "@commitlint/types";
 
 export type WithSymbol<T> = T & {
   symbol: string;
@@ -7,12 +7,16 @@ export type WithSymbol<T> = T & {
 
 export type CommitWithSymbol = WithSymbol<Commit>;
 
-export const breakChangeSymbolRule = (walkData: Commit): RuleOutcome => {
+export const breakChangeSymbolRule = (
+  walkData: Commit,
+  _when?: RuleConfigCondition,
+  value: string = BREAK_CHANGE_SYMBOL
+): RuleOutcome => {
   const { symbol } = walkData as CommitWithSymbol;
-  const isRuleValid = !symbol || symbol === BREAK_CHANGE_SYMBOL;
+  const isRuleValid = !symbol || symbol === value;
 
   return [
     isRuleValid,
-    `break change must be symbol with "${BREAK_CHANGE_SYMBOL}" e.g: ${BREAK_CHANGE_SYMBOL}[Type::scope] subject`,
+    `break change must be symbol with "${value}" e.g: ${value}[Type::scope] subject`,
   ];
 };
