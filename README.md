@@ -77,5 +77,5 @@ module.exports = {
 }
 ```
 
-## LiCENSE
+## LICENSE
 MIT.
