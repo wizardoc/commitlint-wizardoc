@@ -8,3 +8,6 @@ packages/**/dist
 
 # NPM
 package-lock.json
+
+# yarn
+yarn-error.log
