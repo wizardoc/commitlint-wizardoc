@@ -2,7 +2,7 @@
 
 [English](/README.md) | 中文文档
 
-commitlint-wizardoc 是 [commitlint](https://github.com/conventional-changelog/commitlint) 的配置包，其中包含某些规则和插件，以检查您的提交`commit-message`是否符合 `Wizardoc` 约定。
+commitlint-wizardoc 是包含某些规则和插件[commitlint](https://github.com/conventional-changelog/commitlint) 的配置包，他可以检查你提交的`commit-message`是否符合 `Wizardoc` 约定。
 
 ## 用法
 
