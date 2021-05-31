@@ -1,21 +1,27 @@
 # commitlint-wizardoc
+
+English | [中文文档](doc/README-zh.md)
+
 commitlint-wizardoc is a configuration package for [commitlint](https://github.com/conventional-changelog/commitlint) that contain some rules and plugins to check that your commit message conform to the `Wizardoc` convention.
 
 ## Usage
+
 If you have never used commitlint before, you can visit [commitlint document](https://commitlint.js.org/) for more detail.
 
 ### Install
+
 You can install `commitlint-wizardoc` using NPM and YARN as well.
 
 ```shell
 # NPM
-npm i commitlint-wizardoc -D
+npm i commitlint-config-wizardoc -D
 
 # YARN
-yarn add commitlint-wizardoc -D
+yarn add commitlint-config-wizardoc -D
 ```
 
 ### Configuration
+
 Create a [commitlint](https://github.com/conventional-changelog/commitlint) config in the root path of your project, and you can extends the `wizardoc` config to do all configuration work.
 
 For instance, create `.commitlintrc.js` that looks like:
@@ -23,14 +29,16 @@ For instance, create `.commitlintrc.js` that looks like:
 ```js
 module.exports = {
   // This line config will read the NPM package named "commitlint-config-wizardoc", so please make sure you have installed it before config this line.
-  extends: 'wizardoc'
-}
+  extends: "wizardoc",
+};
 ```
 
 Now, that's all you need to do.
 
 ## Convention
+
 The commit message should consists of four parts:
+
 ```
 ![Feat::scope] some sentence
 ^  ^      ^          ^
@@ -62,9 +70,10 @@ The commit message should consists of four parts:
   - Stub
   - Chore
 - `Scope`: scope of modification
-- `Subject`: description of the commit 
+- `Subject`: description of the commit
 
 ## Override configs
+
 You can also override `Wizardoc` config to create your own configuration as well.
 
 ```js
@@ -78,4 +87,5 @@ module.exports = {
 ```
 
 ## LICENSE
+
 MIT.
