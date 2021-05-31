@@ -65,7 +65,8 @@ git 的`commit-message`由以下四部分组成：
   | Update   | 对原有功能的修改                     |
   | Refactor | 代码重构                             |
   | Move     | 移动文件位置                         |
-  | New      | 规模较大的新增                       |
+  | Perf     | 优化相关，比如提升性能、体验         |
+  | Doc      | 修改了文档，比如 README              |
   | Add      | 规模较小的新增                       |
   | Patch    | 对公共方法的完善或者优化             |
   | Fix      | 修复 bug                             |

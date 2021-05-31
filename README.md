@@ -62,7 +62,8 @@ The commit message should consists of four parts:
   - Update
   - Refactor
   - Move
-  - New
+  - Perf
+  - Doc
   - Add
   - Patch
   - Fix
