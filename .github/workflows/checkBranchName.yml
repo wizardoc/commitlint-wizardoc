@@ -8,5 +8,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Branch name
-        run: sh ./.github/workflows/branchName.sh ${GITHUB_REF##*/}
+      - name: check branch name
+        run: echo "${GITHUB_REF#refs/heads/}" |grep -q "feature/" && exit 0 || exit 1
