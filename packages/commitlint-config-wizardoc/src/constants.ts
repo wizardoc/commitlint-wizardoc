@@ -14,13 +14,14 @@ export enum CommitType {
   UPDATE = "Update",
   REFACTOR = "Refactor",
   MOVE = "Move",
-  NEW = "New",
   ADD = "Add",
   PATCH = "Patch",
   FIX = "Fix",
   TEST = "Test",
   STUB = "Stub",
   CHORE = "Chore",
+  PERF = "Perf",
+  DOC = "Doc",
 }
 
 export const CONVERSION_MATCH_REGEX = /^(.?)\[(\w+?)(?:\:\:(\w*))?\]\s(.*)$/;
