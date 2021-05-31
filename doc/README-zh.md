@@ -61,12 +61,12 @@ git 的`commit-message`由以下四部分组成：
   | Feat     | 新增新功能                       |
   | Init     | 新建项目时，对项目的初始化       |
   | Remove   | 代码的改动（删除），粒度较小     |
-  | Delete   | 文件的改动（删除），粒度较小     |
+  | Delete   | 文件的改动（删除），粒度较大     |
   | Update   | 代码块的修改                     |
   | Refactor | 代码重构                         |
   | Move     | 移动文件位置                     |
   | Perf     | 优化相关，比如提升性能、体验     |
-  | Doc      | 修改了文档，比如 README          |
+  | Doc      | 文档相关的修改                   |
   | Add      | 规模较小的新增                   |
   | Patch    | 增加逻辑块为了修复某一个逻辑错误 |
   | Fix      | 修复 bug                         |
