@@ -1,0 +1,12 @@
+name: check branch name
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Branch name
+        run: sh ./.github/workflows/branchName.sh ${GITHUB_REF##*/}
