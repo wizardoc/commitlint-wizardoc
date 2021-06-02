@@ -9,4 +9,4 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: check branch name
-        run: echo "${GITHUB_REF#refs/heads/}" |grep -q "feature/" && exit 0 || exit 1
+        run: ./.github/shell/branchName.sh ${GITHUB_REF#refs/heads/}
