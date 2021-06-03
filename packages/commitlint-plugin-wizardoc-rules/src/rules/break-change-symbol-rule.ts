@@ -1,4 +1,4 @@
-import { BREAK_CHANGE_SYMBOL } from "./constants";
+import { BREAK_CHANGE_SYMBOL } from "../constants";
 import { Commit, RuleOutcome, RuleConfigCondition } from "@commitlint/types";
 
 export type WithSymbol<T> = T & {
