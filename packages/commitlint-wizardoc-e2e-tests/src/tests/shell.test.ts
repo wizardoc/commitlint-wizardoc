@@ -2,39 +2,87 @@
 import { $ } from "../utils/shell";
 
 const SUCCESS_SIGNAL = 0;
-const shellUrl = "./.github/shell/branchName.sh";
-const executeCommand = `chmod +x ${shellUrl} && ${shellUrl}`;
+const BRANCH_NAME_CHECKER = ".github/shell/branchName.sh";
+const checkBranchName = (branchName: string) =>
+  $`chmod +x ${BRANCH_NAME_CHECKER} && ${BRANCH_NAME_CHECKER} ${branchName}`
+    .code;
 
 describe("branchNameTest", () => {
-  it("success branch name", () => {
-    const res = $`sh ${executeCommand} feature/git-rebase-test`;
+  it("correct branch name", () => {
+    const code = checkBranchName("feature/git-rebase-test");
 
-    console.log(`res`, res);
-
-    expect(res.code).toEqual(SUCCESS_SIGNAL);
+    expect(code).toEqual(SUCCESS_SIGNAL);
   });
 
   it("type error", () => {
-    const res = $`sh ${executeCommand} test/git-rebase-test`;
+    const code = checkBranchName("test/git-rebase-test");
 
-    expect(res.code).not.toEqual(SUCCESS_SIGNAL);
+    expect(code).not.toEqual(SUCCESS_SIGNAL);
   });
 
-  it("empty branch name error", () => {
-    const res = $`sh ${executeCommand} feature/`;
+  it("underline suffix", () => {
+    const code = checkBranchName("feature/git-rebase-test_");
 
-    expect(res.code).not.toEqual(SUCCESS_SIGNAL);
+    expect(code).not.toEqual(SUCCESS_SIGNAL);
   });
 
-  it("separator branch name error", () => {
-    const res = $`chmod +x ${executeCommand} feature/brach_name`;
+  it("dash suffix", () => {
+    const code = checkBranchName("feature/git-rebase-test-");
 
-    expect(res.code).not.toEqual(SUCCESS_SIGNAL);
+    expect(code).not.toEqual(SUCCESS_SIGNAL);
   });
 
-  it("upper Case branch name error", () => {
-    const res = $`sh ${executeCommand} feature/brachName`;
+  it("mixin camel case branch name", () => {
+    const code = checkBranchName("feature/git-rebase-branchName");
 
-    expect(res.code).not.toEqual(SUCCESS_SIGNAL);
+    expect(code).not.toEqual(SUCCESS_SIGNAL);
+  });
+
+  it("mixin dash case branch name", () => {
+    const code = checkBranchName("feature/git-rebase-xxx_xxx");
+
+    expect(code).not.toEqual(SUCCESS_SIGNAL);
+  });
+
+  it("missing type", () => {
+    const code = checkBranchName("/git-rebase-xxx_xxx");
+
+    expect(code).not.toEqual(SUCCESS_SIGNAL);
+  });
+
+  it("missing branch name", () => {
+    const code = checkBranchName("feature/");
+
+    expect(code).not.toEqual(SUCCESS_SIGNAL);
+  });
+
+  it("missing separator", () => {
+    const code = checkBranchName("featurexxxxxx");
+
+    expect(code).not.toEqual(SUCCESS_SIGNAL);
+  });
+
+  it("include space", () => {
+    const code = checkBranchName("feature/ ssss-ssss");
+
+    expect(code).not.toEqual(SUCCESS_SIGNAL);
+  });
+
+  it("invalid symbol", () => {
+    const code = checkBranchName("feature/xx&xx");
+
+    expect(code).not.toEqual(SUCCESS_SIGNAL);
+  });
+
+  it("dash case branch name error", () => {
+    const code = checkBranchName("feature/brach_name");
+
+    expect(code).not.toEqual(SUCCESS_SIGNAL);
+  });
+
+  it("camel case branch name error", () => {
+    const code = checkBranchName("feature/brachName");
+
+    expect(code).not.toEqual(SUCCESS_SIGNAL);
   });
 });
