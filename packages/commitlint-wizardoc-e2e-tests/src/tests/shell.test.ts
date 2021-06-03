@@ -2,7 +2,7 @@
 import { $ } from "../utils/shell";
 
 const SUCCESS_SIGNAL = 0;
-const BRANCH_NAME_CHECKER = ".github/shell/branchName.sh";
+const BRANCH_NAME_CHECKER = ".github/shell/branch-name.sh";
 const checkBranchName = (branchName: string) =>
   $`chmod +x ${BRANCH_NAME_CHECKER} && ${BRANCH_NAME_CHECKER} ${branchName}`
     .code;
