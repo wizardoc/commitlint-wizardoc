@@ -1,5 +1,8 @@
 import { Commit, RuleOutcome } from "@commitlint/types";
-import { breakChangeSymbolRule, WithSymbol } from "../break-change-symbol-rule";
+import {
+  breakChangeSymbolRule,
+  WithSymbol,
+} from "../rules/break-change-symbol-rule";
 import { BREAK_CHANGE_SYMBOL } from "../constants";
 
 const walkData = {

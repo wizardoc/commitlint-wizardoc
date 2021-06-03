@@ -1,4 +1,4 @@
-source ./config.sh
+branchType="feature|hotfix|improve|chore"
 
 if [[ $1 =~ ^($branchType)/[a-z]+(-[a-z]+)*$ ]];then
   echo "success"
