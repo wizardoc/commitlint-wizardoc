@@ -1,8 +1,7 @@
 #!/bin/bash
-branchType="feature|hotfix|improve|chore"
+branch_type="feature|hotfix|improve|chore"
 
-if [[ $1 =~ ^($branchType)/[a-z]+(-[a-z]+)*$ ]]
-then
+if [[ $1 =~ ^($branch_type)/[a-z]+(-[a-z]+)*$ ]];then
   exit 0
 else
   exit 1
