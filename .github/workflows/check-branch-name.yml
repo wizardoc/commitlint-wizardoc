@@ -9,4 +9,4 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: check branch name
-        run: chmod +x .github/shell/branch-name.sh && .github/shell/branch-name.sh ${GITHUB_REF#refs/heads/}
+        run: chmod +x packages/ci/src/shell/branch-name.sh && packages/ci/src/shell/branch-name.sh ${GITHUB_REF#refs/heads/}
