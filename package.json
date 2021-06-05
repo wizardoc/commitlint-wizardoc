@@ -15,18 +15,21 @@
     "@commitlint/config-conventional": "^12.1.4",
     "@commitlint/types": "^12.1.4",
     "@types/jest": "^26.0.23",
+    "@types/shelljs": "^0.8.8",
     "commitlint-config-wizardoc": "^1.0.0",
+    "husky": "^6.0.0",
     "jest": "^27.0.1",
     "jest-config": "^27.0.1",
     "lerna": "^4.0.0",
     "ts-jest": "^27.0.0",
-    "typescript": "3.8.3",
-    "husky": "^6.0.0"
+    "typescript": "3.8.3"
   },
   "workspaces": [
     "commitlint-config-wizardoc",
     "commitlint-plugin-wizardoc-rules",
     "commitlint-wizardoc-e2e-tests"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "shelljs": "^0.8.4"
+  }
 }

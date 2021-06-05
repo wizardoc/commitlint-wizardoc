@@ -3,11 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "devDependencies": {
-    "@types/shelljs": "^0.8.8"
-  },
+  "devDependencies": {},
   "dependencies": {
-    "commitlint-config-wizardoc": "^1.0.0",
-    "shelljs": "^0.8.4"
+    "commitlint-config-wizardoc": "^1.0.0"
   }
 }

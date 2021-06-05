@@ -1,0 +1,12 @@
+name: check branch name
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: check branch name
+        run: chmod +x packages/ci/src/shell/branch-name.sh && packages/ci/src/shell/branch-name.sh ${GITHUB_REF#refs/heads/}
