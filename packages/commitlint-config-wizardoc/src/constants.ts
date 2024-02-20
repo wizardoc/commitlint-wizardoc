@@ -22,6 +22,7 @@ export enum CommitType {
   CHORE = "Chore",
   PERF = "Perf",
   DOC = "Doc",
+  RELEASE = "Release",
 }
 
 export const CONVERSION_MATCH_REGEX = /^(.?)\[(\w+?)(?:\:\:(\w*))?\]\s(.*)$/;
